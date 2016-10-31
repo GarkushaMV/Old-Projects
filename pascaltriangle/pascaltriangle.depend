@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1389353921 source:c:\codeblocks\projects\pascaltriangle\main.cpp
+	<iostream>
+

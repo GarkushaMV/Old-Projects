@@ -1,0 +1,12 @@
+Description of algorithms                     ‰   ‰lariph.txt
+Long ariphmetics, include-file                ‰   ‰lariph.h
+    +, -, unary -                             ‰   ‰lariph.cpp
+    Multiplication, int. power, gcd, Euclid   ‰   ‰lamult.cpp
+    Divizion                                  ‰   ‰ladiv.cpp
+    Convertion text <--> long number          ‰   ‰laitoa.cpp
+    Test                                      ‰   ‰latest.cpp
+Modular  ariphmetics, include-file            ‰   ‰lmariph.h
+    Modular ariphmetics                       ‰   ‰lmariph.cpp
+    Test                                      ‰   ‰lmtest.cpp
+--------------------------------------------- ‰   ‰
+Makefile                                      ‰   ‰Makefile

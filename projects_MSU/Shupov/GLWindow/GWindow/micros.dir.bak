@@ -1,0 +1,7 @@
+Simple graphic window                         ‰   ‰gwindow.h
+    Implementation                            ‰   ‰gwindow.cpp
+Test: draw a graph of function                ‰   ‰func.cpp
+Very simple test                              ‰   ‰grtst.cpp
+                                              ‰   ‰
+R2Graph                                       ‰   ‰../R2Graph/R2Graph.h
+All files                                     ‰   ‰.

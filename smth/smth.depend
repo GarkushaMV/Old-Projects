@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1383201342 source:c:\codeblocks\projects\smth\main.cpp
+	<iostream>
+	<vector>
+	<iterator>
+

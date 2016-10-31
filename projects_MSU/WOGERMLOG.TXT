@@ -1,0 +1,46 @@
+-----------------------
+CRASH LOG RELATED CONTEXT
+-----------------------
+-----Context-----
+Wed Sep 25 05:25:55 2013
+.....
+-----------------
+COMMON VARS
+f=0
+g=0
+h=0
+i=0
+j=0
+k=0
+l=0
+m=0
+n=0
+o=0
+p=0
+q=0
+r=0
+s=0
+t=0
+Common flags (1...1000)
+flag999=1
+flag1000=1
+Common v vars (v1...v10000)
+v1=16843240
+v2=-9401087
+v3=14089857
+v4=-2029060096
+v5=1553
+Hero's vars (w1...w200)
+
+TRIGGER BASED VARS
+Trigger y vars (y-1...y-100)
+Trigger e vars (e-1...e-100)
+
+FUNCTION BASED VARS
+Parameters x vars (x1...x16)
+Local y vars (y1...y100)
+Local e vars (e1...e100)
+
+STRING VARS
+Common z vars (z1...z1000)
+Local z vars (z-1...z-10)

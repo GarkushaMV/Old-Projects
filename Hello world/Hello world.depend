@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1418407975 source:c:\codeblocks\codeblocks\projects\hello world\calculator_echo.cpp
+	"stack.h"
+	<ctype.h>
+
+1418409409 c:\codeblocks\codeblocks\projects\hello world\stack.h
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<malloc.h>
+	<string.h>
+	<math.h>
+	<fstream>
+	<assert.h>
+

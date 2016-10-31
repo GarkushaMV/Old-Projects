@@ -1,0 +1,195 @@
+\documentclass[12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[cp1251]{inputenc}       % Кодировка входного документа для Windows;
+\usepackage[english,russian]{babel} % Включение русификации, русских и
+                                    % английских стилей и переносов
+\usepackage{amsmath,amsfonts,amsthm,amssymb,amsbsy,amstext,amscd,amsxtra,multicol,dsfont}
+\usepackage{graphicx}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{array}
+\usepackage{pgfplots}
+\usepackage{multirow}
+
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+
+
+\begin{document}
+
+\centerline{\LARGE Особые точки. Фазовая плоскость}
+
+Часто оказывается недостаточно простого утверждения об устойчивости или неустойчивости решения дифференциального уравнения, а требуется более тонкое изучение поведения системы с течением времени. При этом не требуется (или оказывается просто невозможным) отыскивать общее решение уравнения. Часть теории дифференциальных уравнений, посвященную этой проблеме, принято называть качественной теорией дифференциальных уравнений.
+
+Рассмотрим автономную систему дифференциальных уравнений: $$x_i' = f_i(x_1, \ldots, x_n), i = 1, \ldots, n. \eqno(1)$$
+
+Для системы $(1)$ пространство переменных $(x_1, \ldots, x_n) \in \mathds{R}^n$ есть  \textit{фазовое пространство}. В частности, если $n = 2$, то фазовое пространство называют \textit{фазовой плоскостью}. Положение в этом пространстве, которое занимает при фиксированном $t$ точка $(x_1(t), \ldots, x_n(t)) \in \mathds{R}^n$ - \textit{фазовая точка}. Кривые в $\mathds{R}^n$, которые описывают фазовые точки при изменении параметра $t$ называются \textit{фазовыми траекториями}. Под \textit{направлением} на фазовой траектории подразумевают направление движения фазовой точки $(x_1, \ldots, x_n)$ по траектории в сторону возрастания $t$. Картина, которую образуют фазовые траектории на плоскости $O_{x_1\ldots x_n}$ c указанным на них направлением движения, носит название \textit{фазового портрета}.
+
+В системе $(1)$, при условии, что правые части $f_i(x_1, \ldots, x_n)$ непрерывны и обладают непрерывными частными производными $\frac{\partial f_i}{\partial x_k}, i,k = 1, \ldots, n.$ в своей области определения, возможны три типа фазовых траекторий: точка, замкнутая  и незамкнутая кривая. Точкам соответствует положения равновесия системы. Замкнутая кривая изображает периодическое решение, а незамкнутая - непериодическое.
+
+При $n=2$ обратимся к случаю, когда $(1)$ есть линейная однородная система дифференциальных уравнений с постоянными коэффициентами: $$\frac{dx}{dt} = ax + by, \frac{dy}{dt} = cx + dy. \eqno(2) $$
+                                                                                                                        (2)
+Основная задача качественного исследования системы $(2)$ состоит в том, чтобы выяснить качественную картину его фазового пространства. Характер поведения фазовых траекторий системы $(2)$ на фазовой плоскости определяют корни  и  характеристического уравнения:
+
+$$\begin{vmatrix}
+a-\lambda &b           \\
+c         & d - \lambda
+\end{vmatrix} = 0 \eqno(3) $$
+
+Эти корни могут быть либо действительными, причем простыми или кратными, либо комплексно сопряженными. Возможны только рассматриваемые ниже случаи расположения фазовых траекторий системы в окрестности точки покоя. В таблице приведена их классификация.
+
+\bigskip
+
+\centerline{\Large\textit{Классификация точек покоя.}}
+
+
+\centering
+\begin{tabular}[t]{|>{\centering$}m{2cm}<{$}
+| m{8.5cm}  |
+m{2.5cm}|}
+\hline
+\lambda_{1,2} = \pm \beta i                        &
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-2.3,0.) -- (2.3,0.);
+\draw[->,color=black] (0.,-2.3) -- (0.,2.3);
+\draw(0.,0.) circle (2.cm);
+\draw(0.,0.) circle (1.cm);
+\end{tikzpicture} & Центр               \\ \hline
+
+\lambda_{1,2} = \alpha \pm \beta i$, $\alpha \ne 0 &
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-3.0,0.) -- (4.5,0.);
+\draw[->,color=black] (0.,-3.5) -- (0.,2.8);
+\clip(-3.,-3.) rectangle (3.6,2.6);
+\draw[smooth,samples=1000,domain=0.0:200.0] plot[parametric] function{0.01*t**(2.0)*cos((t)),0.01*t**(2.0)*sin((t))};
+\end{tikzpicture}
+
+& Фокус               \\ \hline
+\end{tabular}
+
+\centering
+\begin{tabular}[t]{|>{\centering$}m{2cm}<{$}
+| m{8cm}  |
+m{3cm}|}
+\hline
+\lambda_{1,2} \in \mathds{R}$,
+
+$\lambda_1 \ne \lambda_2$,
+
+$\lambda_1\cdot\lambda_2 > 0                       &\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.,0.) -- (4.,0.);
+\draw[->,color=black] (0.,-3.8) -- (0.,3.8);
+\clip(-4.,-3.6) rectangle (4.,3.6);
+\draw [samples=50,rotate around={0.:(0.,0.)},xshift=0.cm,yshift=0.cm,domain=-3.0:3.0)] plot (\x,{(\x)^2/2/0.5});
+\draw [samples=50,rotate around={0.:(0.,0.)},xshift=0.cm,yshift=0.cm,domain=-5.0:5.0)] plot (\x,{(\x)^2/2/0.8333333333333334});
+\draw [samples=50,rotate around={-180.:(0.,0.)},xshift=0.cm,yshift=0.cm,domain=-3.0:3.0)] plot (\x,{(\x)^2/2/0.5});
+\draw [samples=50,rotate around={-180.:(0.,0.)},xshift=0.cm,yshift=0.cm,domain=-5.0:5.0)] plot (\x,{(\x)^2/2/0.8333333333333334});
+\draw [samples=50,rotate around={0.:(0.,0.)},xshift=0.cm,yshift=0.cm,domain=-6.666666666666667:6.666666666666667)] plot (\x,{(\x)^2/2/1.6666666666666667});
+\draw [samples=50,rotate around={-180.:(0.,0.)},xshift=0.cm,yshift=0.cm,domain=-6.666666666666667:6.666666666666667)] plot (\x,{(\x)^2/2/1.6666666666666667});
+\end{tikzpicture}  & Узел                \\ \hline
+
+\lambda_{1,2} \in \mathds{R}$,
+
+$\lambda_1 \ne \lambda_2$,
+
+
+$\lambda_1\cdot\lambda_2 < 0                       & \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.,0.) -- (4.,0.);
+\draw[->,color=black] (0.,-4.) -- (0.,4.);
+\clip(-4.,-4.) rectangle (4.,4.);
+\draw[line width=0.5pt,color=black,samples=100,domain=-4.0:4.0] plot(\x,{1.0/(\x)});
+\draw[line width=0.5pt,color=black,samples=100,domain=-4.0:4.0] plot(\x,{0.5/(\x)});
+\draw[line width=0.5pt,color=black,samples=100,domain=-4.0:4.0] plot(\x,{0-1.0/(\x)});
+\draw[line width=0.5pt,color=black,samples=100,domain=-4.0:4.0] plot(\x,{0-0.5/(\x)});
+\end{tikzpicture} & Седло               \\ \hline
+\end{tabular}
+
+\centering
+\begin{tabular}[t]{|>{\centering$}m{2cm}<{$}
+| m{8cm}  |
+m{3cm}|}
+\hline
+\multirow{2}{*}{$\lambda_1 = \lambda_2 \ne 0 $}    & 
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.,0.) -- (4.,0.);
+\draw[->,color=black] (0.,-4.) -- (0.,4.);
+\clip(-4.,-4.) rectangle (4.,4.);
+\draw[line width=0.5pt, smooth,samples=100,domain=-4.:4.] plot[parametric] function{t*(t+1.0)*(t-1.0),t};
+\draw[line width=0.5pt, smooth,samples=100,domain=-4.:4.] plot[parametric] function{t*(t-1.5)*(t+1.5),t};
+\draw[line width=0.5pt, smooth,samples=100,domain=-4.:4.] plot[parametric] function{t*(t-2.0)*(t+2.0),t};
+\draw[line width=0.5pt, smooth,samples=100,domain=-4.:4.] plot[parametric] function{t*(t-1.5)*(t+1.5),t};
+\end{tikzpicture} & Вырожденный узел    \\ \cline{2-3}
+
+                                                   &\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.,0.) -- (4.,0.);
+\draw[->,color=black] (0.,-4.) -- (0.,4.);
+\clip(-4.,-4.) rectangle (4.,4.);
+\draw [domain=-4.:4.] plot(\x,{(-0.--1.5*\x)/1.});
+\draw [domain=-4.:4.] plot(\x,{(-0.--0.5*\x)/1.});
+\draw [domain=-4.:4.] plot(\x,{(-0.-1.5*\x)/1.});
+\draw [domain=-4.:4.] plot(\x,{(-0.-0.5*\x)/1.});
+\end{tikzpicture}  & Дикритический узел. Только в случае системы вида $\left\{ \begin{array}{l} x' = ax \\ y' = ay \end{array}\right.$ \\ \hline
+\end{tabular}
+
+\centering
+\begin{tabular}[t]{|>{\centering$}m{2cm}<{$}
+| m{8cm}  |
+m{3cm}|}
+\hline
+\lambda_1 =0$,
+
+$\lambda_2 \ne 0                     &\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.,0.) -- (4.,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
+\draw[->,color=black] (0.,-4.) -- (0.,4.);
+\foreach \y in {-4.,-3.,-2.,-1.,1.,2.,3.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
+\clip(-4.,-4.) rectangle (4.,4.);
+\draw [domain=-4.:4.] plot(\x,{(-0.--1.*\x)/1.});
+\draw [domain=-4.:4.] plot(\x,{(--0.5--1.*\x)/1.});
+\draw [domain=-4.:4.] plot(\x,{(--1.--1.*\x)/1.});
+\draw [domain=-4.:4.] plot(\x,{(-0.5--1.*\x)/1.});
+\draw [domain=-4.:4.] plot(\x,{(-1.--1.*\x)/1.});
+\draw [domain=-4.:4.] plot(\x,{(-1.5--1.*\x)/1.});
+\draw [domain=-4.:4.] plot(\x,{(--1.5--1.*\x)/1.});
+\draw [domain=-4.:4.] plot(\x,{(--2.--1.*\x)/1.});
+\draw [domain=-4.:4.] plot(\x,{(-2.--1.*\x)/1.});
+\draw [domain=-4.:4.] plot(\x,{(-2.5--1.*\x)/1.});
+\draw [domain=-4.:4.] plot(\x,{(--2.5--1.*\x)/1.});
+\end{tikzpicture}  & В этом случае система имеет вид $\frac{dy}{dx} = k$. 
+
+Траектории - прямые $y = kx + c$\\ \hline
+
+\lambda_{1,2} = 0                                  &  & Вся фазовая плоскость\\ \hline
+
+\end{tabular}
+
+\medskip
+
+\centerline{\textit{\textbf{Схема построения фазового портрета}}}
+
+\begin{flushleft}
+
+    $1$. Определить точки покоя системы.
+
+    $2$. Выписать характеристическое уравнение $(3)$ и найти корни $\lambda_1$ и $\lambda_2$  - собственные значения матрицы системы.
+
+    $3$. По таблице определить тип точки покоя.
+
+    $4$. Начертить фазовый портрет.
+    
+        a) Если точка покоя является узлом или седлом, то следует найти собственные вектора матрицы и начертить определяемые этими векторами прямые на фазовой плоскости. В случае узла фазовые траектории касаются той прямой, которая отвечает меньшему по абсолютной величине собственному значению.
+ 
+        б) Если точка покоя является фокусом, то нужно определить направление закручивания траекторий. Для этого достаточно построить в какой-либо точке $(x,y)$ вектор скорости $(x', y')$, определяемый по формулам $(2)$.
+ 
+        в) В оставшихся случаях вид траекторий можно определить, непосредственно решая данную систему. Для этого ее нужно записать в виде $\frac{dy}{dx} = \frac{cx+dy}{ax+by}$.
+ 
+    $5$. Определить направление движения по фазовым траекториям и изобразить его стрелками на фазовом портрете. Оно определяется устойчивостью (к) или неустойчивостью (от) исследуемого положения равновесия.
+В случае седла сначала нужно показать направления движения по прямым, определяемым собственными векторами, учитывая, что движение по прямой, соответствующей отрицательному собственному значению, происходит к точке покоя, а по прямой, соответствующей положительному собственному значению, - от нее. По всем остальным фазовым траекториям движение происходит согласно указанным уже направлениям.
+В случае центра направления движения можно определить, построив в произвольной точке плоскости вектор скорости.
+\end{flushleft}
+
+
+\end{document} 

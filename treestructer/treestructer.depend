@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1419236753 source:c:\codeblocks\codeblocks\projects\treestructer\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<assert.h>
+	<locale.h>
+	"tree.h"
+	"derivations.h"
+	"convert.h"
+	"functions.h"
+
+1419237182 c:\codeblocks\codeblocks\projects\treestructer\tree.h
+	"functions.h"
+
+1419222293 c:\codeblocks\codeblocks\projects\treestructer\functions.h
+
+1419234742 c:\codeblocks\codeblocks\projects\treestructer\derivations.h
+	"functions.h"
+
+1418630752 c:\codeblocks\codeblocks\projects\treestructer\convert.h
+

@@ -1,0 +1,4 @@
+function quine()
+{
+alert (quine);
+}

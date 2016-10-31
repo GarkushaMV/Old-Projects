@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1409304856 source:c:\codeblocks\projects\d_for_deikstra\main.cpp
+	<iostream>
+	<set>
+

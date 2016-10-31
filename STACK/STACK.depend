@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1416142226 source:c:\codeblocks\codeblocks\projects\stack\main.c
+	<stdio.h>
+	<assert.h>
+	<stdlib.h>
+	"CPU.h"
+
+1416197517 source:c:\codeblocks\codeblocks\projects\stack\assemblerator.c
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	"commander.h"
+	"commander.h"
+
+1419249025 c:\codeblocks\codeblocks\projects\stack\stack.h
+
+1419247507 c:\codeblocks\codeblocks\projects\stack\cpu.h
+	"STACK.h"
+
+1419250084 c:\codeblocks\codeblocks\projects\stack\commander.h
+
+1419251410 source:c:\codeblocks\codeblocks\projects\stack\cpu.c
+	<stdio.h>
+	<assert.h>
+	<stdlib.h>
+	<math.h>
+	"CPU.h"
+	"commander.h"
+	"commander.h"
+
+1414192409 source:c:\codeblocks\codeblocks\projects\stack\disassemblerator.c
+

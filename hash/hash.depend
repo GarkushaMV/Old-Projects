@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1419242409 source:c:\codeblocks\codeblocks\projects\hash\hash.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"Strread.h"
+
+1416757262 c:\codeblocks\codeblocks\projects\hash\list.h
+
+1419216653 c:\codeblocks\codeblocks\projects\hash\strread.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<io.h>
+	<malloc.h>
+	<ctype.h>
+	"list.h"
+
+1416221261 c:\codeblocks\codeblocks\projects\hash\cmd.h
+

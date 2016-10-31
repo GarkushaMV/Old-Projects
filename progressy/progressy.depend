@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1385119274 source:c:\codeblocks\projects\progressy\main.cpp
+	<iostream>
+	<set>
+	<vector>
+

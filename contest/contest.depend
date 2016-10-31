@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1418026870 source:c:\codeblocks\codeblocks\projects\contest\main.c
+	<stdio.h>
+	<stdlib.h>
+	<malloc.h>
+

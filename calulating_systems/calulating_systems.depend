@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1389353600 source:c:\codeblocks\projects\calulating_systems\main.cpp
+	<iostream>
+	<string>
+

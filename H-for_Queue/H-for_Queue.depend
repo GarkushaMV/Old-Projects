@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1409782225 source:c:\codeblocks\projects\h-for_queue\main.cpp
+	<iostream>
+	<set>
+	<queue>
+

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1444245947 source:c:\codeblocks\codeblocks\projects\onegin\main.c
+	<locale.h>
+	"Strread.h"
+
+1444318982 c:\codeblocks\codeblocks\projects\onegin\strread.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<io.h>
+	<malloc.h>
+	<ctype.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1389536757 source:c:\codeblocks\projects\libleap.a\main.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+

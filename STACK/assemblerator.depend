@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1419249768 source:c:\codeblocks\codeblocks\projects\stack\assemblerator.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<ctype.h>
+	"commander.h"
+
+1419250084 c:\codeblocks\codeblocks\projects\stack\commander.h
+

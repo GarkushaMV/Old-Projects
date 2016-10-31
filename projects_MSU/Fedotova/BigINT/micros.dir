@@ -1,0 +1,11 @@
+class BigInt                                  ‰   ‰BigInt.h
+    Implementation                            ‰   ‰BigInt.cpp
+"lariph" package                              ‰   ‰lariph/micros.dir
+--------------------------------------------- ‰   ‰
+Tests                                         ‰   ‰
+Simple test                                   ‰   ‰tst.cpp
+Stack calculator of Big Integers              ‰   ‰stcalc.cpp
+Stack of Big Integers                         ‰   ‰BIStack.h
+    Implementation                            ‰   ‰BIStack.cpp
+--------------------------------------------- ‰   ‰
+Makefile                                      ‰   ‰Makefile

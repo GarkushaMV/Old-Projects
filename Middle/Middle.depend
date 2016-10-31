@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1395034663 source:c:\codeblocks\projects\middle\main.cpp
+	<iostream>
+	<set>
+	<iterator>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1416815792 source:c:\codeblocks\codeblocks\projects\lineruler\main.c
+	<stdio.h>
+	<stdlib.h>
+	<io.h>
+
